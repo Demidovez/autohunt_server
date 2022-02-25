@@ -62,7 +62,7 @@ export const AdvtSchema = new Schema<Advt>({
   heated_windshield: Boolean,
   heated_mirrors: Boolean,
   wheel_heating: Boolean,
-  Heater: Boolean,
+  heater: Boolean,
   climate_control: Boolean,
   air_conditioner: Boolean,
   aux: Boolean,
@@ -74,4 +74,6 @@ export const AdvtSchema = new Schema<Advt>({
   xenon_headlights: Boolean,
   fog_lights: Boolean,
   led_headlights: Boolean,
+  site: String,
+  url: String,
 });

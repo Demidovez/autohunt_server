@@ -60,7 +60,7 @@ export interface Advt {
   heated_windshield: boolean; // Обогрев Лобового стекла
   heated_mirrors: boolean; // Обогрев Зеркал
   wheel_heating: boolean; // Обогрев Руля
-  Heater: boolean; // Автономный отопитель
+  heater: boolean; // Автономный отопитель
   climate_control: boolean; // Климат-контроль
   air_conditioner: boolean; // Кондиционер
   aux: boolean; // AUX или iPod
@@ -72,4 +72,6 @@ export interface Advt {
   xenon_headlights: boolean; // Ксеноновые фары
   fog_lights: boolean; // Противотуманные фары
   led_headlights: boolean; // Светодиодные фары
+  site: string; // Сайт
+  url: string; // Остальная часть ссылки
 }

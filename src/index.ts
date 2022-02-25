@@ -1,6 +1,7 @@
 import axios from "axios";
 import express from "express";
 import mongoose from "mongoose";
+import { Advt } from "./types";
 
 const app = express();
 const port = process.env.PORT;
@@ -13,34 +14,43 @@ app.get("/", (req, res) => {
 });
 
 app.get("/save_advt", (req, res) => {
-  const advt = {
+  const advt: Advt = {
+    id: new mongoose.Types.ObjectId(),
     advt_id: 1111,
     title: "title",
-    brand: "title",
-    model: "title",
-    generation: "title",
-    description: "title",
+    brand: "brand",
+    model: "model",
+    generation: "generation",
+    description: "description",
     date_create: 2222,
     date_modify: 3333,
-    state: "title",
-    status: "title",
-    status_parse: "title",
+    state: "state",
+    status: "status",
+    status_parse: "status_parse",
     price_byn: 44444,
     price_usd: 55555,
-    city: "title",
+    city: "city",
     year: 66666,
-    gearbox: "title",
+    gearbox: "gearbox",
     volume: 777777,
-    fuel: "title",
+    fuel: "fuel",
     kilometers: 88888,
-    carcase: "title",
-    drive: "title",
-    color: "title",
+    carcase: "carcase",
+    drive: "drive",
+    color: "color",
     phones: ["345345353"],
-    owner: "title",
+    owner: "owner",
     vin_status: true,
     exchange: true,
-    images: ["sdfsdfsdf"],
+    images: [
+      "https://avcdn.av.by/advertbig/0000/5540/1213.jpeg",
+      "https://avcdn.av.by/advertbig/0000/5540/1223.jpeg",
+      "https://avcdn.av.by/advertbig/0000/5540/1243.jpeg",
+      "https://avcdn.av.by/advertbig/0000/5540/1248.jpeg",
+      "https://avcdn.av.by/advertbig/0000/5540/1273.jpeg",
+      "https://avcdn.av.by/advertbig/0000/5540/1283.jpeg",
+      "https://avcdn.av.by/advertbig/0000/5540/1288.jpeg",
+    ],
     is_private: true,
     alloy_wheels: true,
     roof_rails: true,
@@ -57,8 +67,8 @@ app.get("/save_advt", (req, res) => {
     front_airbags: true,
     side_airbags: true,
     behind_airbags: true,
-    interior_color: "title",
-    interior_material: "title",
+    interior_color: "interior_color",
+    interior_material: "interior_material",
     panoramic_view: true,
     luke: true,
     version_7: true,
@@ -72,7 +82,7 @@ app.get("/save_advt", (req, res) => {
     heated_windshield: true,
     heated_mirrors: true,
     wheel_heating: true,
-    Heater: true,
+    heater: true,
     climate_control: true,
     air_conditioner: true,
     aux: true,
@@ -84,6 +94,8 @@ app.get("/save_advt", (req, res) => {
     xenon_headlights: true,
     fog_lights: true,
     led_headlights: true,
+    site: "cars.av.by",
+    url: "/ssangyong/rexton/100791963",
   };
 
   axios
